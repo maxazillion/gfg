@@ -54,8 +54,8 @@ const bruteForceV1 = (str, n) => {
     the lowest number of the highest key will be the lowest possible number
     */
 
-  for (let i = 1; i < n + 1; i++) {
-    if (i + 1 !== n + 1) choiceObject[i + 1] = [];
+  for (let i = 1; i < n + 2; i++) {
+    if (i + 1 !== n + 2) choiceObject[i + 1] = [];
     if (choiceObject[i]) {
       choiceObject[i].forEach((subArray) => {
         subArray.forEach((number, index) => {
@@ -72,14 +72,15 @@ const bruteForceV1 = (str, n) => {
   This is just a really bad way to do this since it's very complex but i think it works
   */
 
-  const lastList = choiceObject[n].map((item) => {
+  const lastList = choiceObject[n + 1].map((item) => {
     return parseInt(item.join(""));
   });
 
+  console.log(choiceObject);
   return lastList.sort((a, b) => a - b)[0];
 };
 
-console.log(bruteForceV1("1290029919", 4));
+console.log(bruteForceV1("149811", 1));
 
 /*
 "149811"
