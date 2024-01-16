@@ -43,6 +43,7 @@ const bruteForceV1 = (str, n) => {
 
   const numArr = str.split("");
   let choiceObject = { 1: [[...numArr]] };
+  if (numArr.length <= n) return 0;
 
   /*
     I think im going to create an object actually the objext will have keys from 1 -> N
@@ -80,9 +81,11 @@ const bruteForceV1 = (str, n) => {
   return lastList.sort((a, b) => a - b)[0];
 };
 
-console.log(bruteForceV1("149811", 1));
+console.log(bruteForceV1("971149", 5));
 
 /*
 "149811"
 '1290029919'
+'971149', 6 //broken test case
+
 */
