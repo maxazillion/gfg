@@ -145,7 +145,6 @@ const data4 = {
   },
   right: { data: 8, left: null, right: null },
 };
-
 // 0 6 N 4 9 2 5 7 N N 3 N N N 8 N N N N
 
 const isBSTGFGSubmission = (root) => {
